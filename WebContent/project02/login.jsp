@@ -78,5 +78,20 @@ body, html {
 	</form>
 	</div>
 </div>
+<script>
+function check() {
+	if(!document.form.id.value || document.form.id.value == "") {
+		alert("아이디가 입력되지 않았습니다.");
+		document.form.id.focus();
+	}
+	else if(!document.form.pass.value || document.form.pass.value == "") {
+		alert("비밀번호가 입력되지 않았습니다.");
+		document.form.pass.focus();
+	}
+	else {
+		document.form.submit();
+	}
+}
+</script>
 </body>
 </html>

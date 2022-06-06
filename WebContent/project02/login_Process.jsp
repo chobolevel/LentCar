@@ -8,7 +8,7 @@
 	String pass = request.getParameter("pass");
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
-	String sql = "select pass from c_member where id = ?";
+	String sql = "select password from c_member where id = ?";
 	try {
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, id);

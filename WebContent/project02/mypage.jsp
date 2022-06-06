@@ -16,6 +16,26 @@
 <div class = "home">
 	<a class = "aa" href = "index.jsp">LOGO</a>
 </div>
+<table border = "1" id = "tab1">
+<tr>
+	<th>ID</th>
+	<th>P/W</th>
+	<th>이름</th>
+	<th>주소</th>
+	<th>휴대폰번호</th>
+	<th>성별</th>
+	<th>생년월일</th>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
 </section>
 
 </body>

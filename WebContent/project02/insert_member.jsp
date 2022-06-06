@@ -34,7 +34,7 @@ body,html {
 .head {
 	text-align : center;
 	font-size : 1.5em;
-	padding : 10% 0;
+	padding : 7% 0;
 	color : white;
 	font-family : sans-serif;
 }
@@ -47,7 +47,7 @@ body,html {
 	width : 50%;
 	height : 30px;
 	background : #ddd;
-	margin-top : 5%;
+	margin-top : 4%;
 }
 </style>
 </head>
