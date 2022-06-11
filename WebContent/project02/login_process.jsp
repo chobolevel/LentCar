@@ -5,7 +5,7 @@
 
 <%
 	String id = request.getParameter("id");
-	String pass = request.getParameter("pass");
+	String password = request.getParameter("password");
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	String sql = "select password from c_member where id = ?";
@@ -15,7 +15,7 @@
 		rs = pstmt.executeQuery();
 		if(rs.next()) {
 			String temp_pass = rs.getString(1);
-			if(pass.equals(temp_pass)) {
+			if(password.equals(temp_pass)) {
 				session.setAttribute("signedUser", id);
 				%>
 				<script>

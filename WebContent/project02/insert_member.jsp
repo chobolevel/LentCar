@@ -30,24 +30,31 @@ body,html {
 	left : 20%;
 	background-color : #1A1A3A;
 	border-radius : 40px;
-}
-.head {
 	text-align : center;
-	font-size : 1.5em;
-	padding : 7% 0;
+}
+#tab1 {
+	width : 60%;
+	margin : 0 auto;
+}
+#tab1 td {
+	text-align : center;
+}
+h1 {
+	text-align : center;
 	color : white;
-	font-family : sans-serif;
+	padding : 12px 0 8px 0;
+	font-size : 1.5em;
 }
-.in {
-	width : 50%;
-	height : 30px;
-	margin : 1% 0;
+#tab1 input[type=text] {
+	width : 90%;
+	height : 26px;
+	margin : 8px;
 }
-.but {
-	width : 50%;
-	height : 30px;
-	background : #ddd;
-	margin-top : 4%;
+#tab1 input[type=button] {
+	width : 90%;
+	height : 26px;
+	background : #eee;
+	margin-top : 20px;
 }
 </style>
 </head>
@@ -56,19 +63,37 @@ body,html {
 <div class = "container">
 
 <div class = "box">
-	<div class = "head">
-		<h2>회원 가입을 환영합니다</h2>
-	</div>
 	<div align = "center">
+		<h1>회원 가입을 환영합니다!</h1>
 		<form name = "form" method = "post" action = "insert_memberProcess.jsp">
-			<input class = "in" type = "text" name = "id" placeholder = "아이디"><br>
-			<input class = "in" type = "password" name = "pass1" placeholder = "비밀번호"><br>
-			<input class = "in" type = "password" name = "pass2" placeholder = "비밀번호 확인"><br>
-			<input class = "in" type = "text" name = "name" placeholder = "이름"><br>
-			<input class = "in" type = "text" name = "address" placeholder = "주소"><br>
-			<input class = "in" type = "text" name = "phone" placeholder = "전화번호"><br>
-			<input class = "in" type = "text" name = "birth" placeholder = "생년월일(YYYYMMDD)"><br>
-			<input class = "but" type = "button" value = "회원가입" onclick = "check()">
+		<table id = "tab1">
+			<tr>
+				<td><input type = "text" name = "id" placeholder = "아이디"></td>
+			</tr>
+			<tr>
+				<td><input type = "text" name = "password" placeholder = "비밀번호"></td>
+			</tr>
+			<tr>
+				<td><input type = "text" name = "passcheck" placeholder = "비밀번호 확인"></td>
+			</tr>
+			<tr>
+				<td><input type = "text" name = "name" placeholder = "이름"></td>
+			</tr>
+			<tr>
+				<td><input type = "text" name = "address" placeholder = "주소"></td>
+			</tr>
+			<tr>
+				<td><input type = "text" name = "phone" placeholder = "전화번호"></td>
+			</tr>
+			<tr>
+				<td><input type = "text" name = "birth" placeholder = "생년월일(8자리)"></td>
+			</tr>
+			<tr>
+				<td align = "center">
+					<input type = "button" value = "회원가입" onclick = "check()">
+				</td>
+			</tr>
+		</table>
 		</form>
 	</div>
 </div>

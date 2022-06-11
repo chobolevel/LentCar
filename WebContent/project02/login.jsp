@@ -4,89 +4,96 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
 <style>
 * {
 	padding : 0;
 	margin : 0;
 }
-body, html {
+body,html {
 	width : 100%;
 	height : 100%;
 }
 .container {
 	width : 100%;
 	height : 100%;
-	position : relative;
 	background-image : url("logimg.jpg");
 	background-repeat : no-repeat;
 	background-size : cover;
+	position : relative;
 }
 .box {
 	width : 60%;
-	height : 60%;
-	text-align : center;
+	height : 40%;
 	position : absolute;
+	top : 30%;
 	left : 20%;
-	top : 20%;
 	background-color : #1A1A3A;
-	border-radius : 40px;
+	text-align : center;
+	border-radius : 20px;
 }
-.in {
-	width : 50%;
-	height : 30px;
-	margin : 2% 0;
+#tab1 {
+	width : 80%;
+	margin : auto;
 }
-.head {
+#tab1 input[type=text],[type=password] {
+	width : 100%;
+	height : 36px;
+	margin : 5px 0;
+}
+#tab1 input[type=button] {
+	width : 80%;
+	height : 90px;
+	background : #eee;
+}
+h1 {
+	padding-top : 26px;
+	padding-bottom : 22px;
 	color : white;
-	font-size : 3em;
-	padding : 10% 0;
-}
-.but {
-	width : 60%;
-	height : 30px;
-	background : #ddd;
 }
 .aa {
 	text-decoration : none;
 	color : white;
-	padding : 5% 5%;
+	font-weight : bold;
 }
 </style>
 </head>
 <body>
 
 <div class = "container">
-	<div class = "box">
-	<div class = "head">
-		Welcome!
-	</div>
-	<form name = "form" method = "post" action = "login_Process.jsp">
-		<div>
-			<input class = "in" type = "text" name = "id" placeholder = "ID">
-		</div>
-		<div>
-			<input class = "in" type = "password" name = "pass" placeholder = "PASSWORD">
-		</div>
-		<div style = "margin : 8%;">
-			<input class = "but" type = "button" value = "LOGIN" onclick = "check()">
-		</div>
-		<div style = "margin : 8%;">
-			<a class = "aa" href = "insert_member.jsp">회원가입</a>
-			<a class = "aa" href = "find_idpass.jsp">아아디/비밀번호 찾기</a>
-		</div>
-	</form>
-	</div>
+<div class = "box">
+<h1>WELCOME!</h1>
+<form name = "form" method = "post" action = "login_process.jsp">
+<table id = "tab1">
+<tr>
+	<td><input type = "text" name = "id" placeholder = "아이디"></td>
+	<td rowspan = "2" style = "line-height:20px">
+		<input type = "button" value = "로그인" onclick = "check()">
+	</td>
+</tr>
+<tr>
+	<td><input type = "password" name = "password" placeholder = "비밀번호"></td>
+</tr>
+<tr>
+	<td colspan = "2" height = "40px">
+		<a class = "aa" href = "insert_member.jsp">회원가입</a>
+	</td>
+</tr>
+</table>
+</form>
+</div>
 </div>
 <script>
 function check() {
-	if(!document.form.id.value || document.form.id.value == "") {
+	if(document.form.id.value == "") {
 		alert("아이디가 입력되지 않았습니다.");
 		document.form.id.focus();
 	}
-	else if(!document.form.pass.value || document.form.pass.value == "") {
+	else if(document.form.password.value == "") {
 		alert("비밀번호가 입력되지 않았습니다.");
-		document.form.pass.focus();
+		document.form.password.focus();
 	}
 	else {
 		document.form.submit();
